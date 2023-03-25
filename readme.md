@@ -1,5 +1,7 @@
 # Memories Social Media App
 
+![alt text](68747470733a2f2f692e6962622e636f2f5a385930434a762f53637265656e73686f742d323032302d31302d33302d61742d31312d31302d30342e706e67.png)
+
 ## **Description**
 
 _Memories is a simple social media app that allows users to post interesting events that happened in their lives. Users can create an account, log in, and share their stories with a community of like-minded individuals. The app has been developed using ReactJS for the frontend, NodeJS for the backend, and MongoDB as the database._
@@ -21,7 +23,7 @@ _Memories is a simple social media app that allows users to post interesting eve
 
 ## **Installation**
 
-To run the app locally, follow these steps:
+_To run the app locally, follow these steps:_
 
 1. **Clone the repository**
 
