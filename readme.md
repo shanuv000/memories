@@ -1,6 +1,7 @@
-Sure, here's an example markdown code to describe your project:
+# Sure, here's an example markdown code to describe your project:
 
-Memories Social Media App
+## Memories Social Media App
+
 Description
 Memories is a simple social media app that allows users to post interesting events that happened in their lives. The app has been developed using ReactJS for the frontend, NodeJS for the backend, and MongoDB as the database.
 
