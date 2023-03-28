@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import useStyles from "./styles";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import FileBase from "react-file-base64";
+import { useDispatch } from "react-redux";
+import { createPost } from "../../actions/posts";
 
 const Form = () => {
   const [postData, setPostData] = useState({
@@ -12,7 +14,11 @@ const Form = () => {
     selectedFile: "",
   });
   const classes = useStyles();
-  const handleSubmit = () => {};
+  const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(createPost(postData));
+  };
   const clear = () => {};
   return (
     <Paper className={classes.paper}>
@@ -51,6 +57,7 @@ const Form = () => {
             setPostData({ ...postData, message: e.target.value })
           }
         />
+
         <TextField
           name="tags"
           variant="outlined"
@@ -63,31 +70,31 @@ const Form = () => {
           <FileBase
             type="file"
             multiple={false}
-            onDone={(base64) =>
+            onDone={({ base64 }) =>
               setPostData({ ...postData, selectedFile: base64 })
             }
           />
-          <Button
-            className={classes.buttonSubmit}
-            variant="contained"
-            color="primary"
-            size="large"
-            type="submit"
-            fullWidth
-          >
-            Submit
-          </Button>
-          <Button
-            // className={classes.buttonSubmit}
-            variant="contained"
-            color="secondary"
-            size="small"
-            onClick={clear}
-            fullWidth
-          >
-            Clear
-          </Button>
         </div>
+        <Button
+          className={classes.buttonSubmit}
+          variant="contained"
+          color="primary"
+          size="large"
+          type="submit"
+          fullWidth
+        >
+          Submit
+        </Button>
+        <Button
+          // className={classes.buttonSubmit}
+          variant="contained"
+          color="secondary"
+          size="small"
+          onClick={clear}
+          fullWidth
+        >
+          Clear
+        </Button>
       </form>
     </Paper>
   );
