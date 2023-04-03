@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
+/.vscode
 .pnp.js
 
 # testing
@@ -10,7 +11,8 @@
 
 # production
 /build
-/.vscode
+
+
 # misc
 .DS_Store
 .env.local
