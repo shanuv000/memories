@@ -59,5 +59,4 @@ const Posts = () => {
 //     </Grid>
 //   );
 // };
-
 export default Posts;
